@@ -50,3 +50,19 @@ let products = {
       },
     ],
   };
+
+for(let i of products.data){
+    // creo un elemento div en cada elemento de la lista data
+    let card = document.createElement('div');
+    // creo 3 clases dentro del div: card, i.category(dependiendo de cada elemento de la lista, hide
+    card.classList.add('card', i.category, 'hide');
+    // agrego contenedor de una imagen y un div
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("image-container");
+    //creo un elemento img
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    imgContainer.appendChild(image);
+    card.appendChild(imgContainer);
+}
+
